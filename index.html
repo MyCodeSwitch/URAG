@@ -17,32 +17,60 @@
 
   <body>
     <!-- nav -->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light shadow">
       <div class="container">
-        <a href="index.html" class="navbar-brand">
-          <img src="images/logo.png" alt="logo" width="250">
-        </a>
+
+
+        <!-- brand -->
+        <a href="index.html" class="navbar-brand h1 fw-bolder fs-3 mb-0">URAG</a>
+
+        <!-- button -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <!-- dropoff -->
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a href="index.html" class="nav-link fw-semibold text-primary">Home</a>
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            
+            <li class="nav-item me-3">
+              <a href="index.html" class="nav-link fw-semibold active" aria-current="page">Home</a>
             </li>
-            <li class="nav-item">
-              <a href="#details" class="nav-link fw-semibold">About</a>
+
+            <li class="nav-item dropdown me-3">
+              <a class="nav-link dropdown-toggle fw-semibold" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                About
+              </a>
+              <ul class="dropdown-menu boundary-primary" aria-labelledby="aboutDropdown">
+                <li><a class="dropdown-item" href="#">Background</a></li>
+                <li><a class="dropdown-item" href="#">Mission</a></li>
+                <li><a class="dropdown-item" href="#">Team</a></li>
+                <li><a class="dropdown-item" href="#">Partners</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Contact</a></li>
+              </ul>
             </li>
-            <li class="nav-item">
+
+            <li class="nav-item me-3">
               <a href="#details" class="nav-link fw-semibold">Project</a>
             </li>
-            <li class="nav-item">
+
+            <li class="nav-item me-3">
               <a href="#details" class="nav-link fw-semibold">Resources</a>
             </li>
-            <li class="nav-item">
-              <a href="#details" class="nav-link fw-semibold btn btn-outline-light mx-4 px-4">Contact</a>
+
+            <li class="nav-item mt-md-0 mt-4">
+        
+              <a href="#details" class="nav-link fw-semibold btn btn-primary text-white mx-4 px-4">Join Us</a>
             </li>
+
+            <li class="nav-item">
+              <div class="btn-group">
+                <button class="btn btn-secondary btn-sm" data-bs-theme-value="dark">Dark</button>
+                <button class="btn btn-light btn-sm" data-bs-theme-value="light">light</button>
+              </div>
+            </li>
+        
           </ul>
 
         </div>
@@ -51,21 +79,176 @@
 
     <!-- Header -->
     <header class="header">
-    <p>About >> background, mission, team, partners, contact</p>
-  
+      <div class="hero text-white pt-7 pb-5">
+        <div class="container-xl">
+          <div class="p-md-7 ps-md-0 col-lg-7 col-md-10 col-12 pb-2 ">
+            <div class="p-4 rounded-5" style="background-color: rgba(54, 54, 54, 0.7);">
 
+              <h1 class="display-5 fw-bold mb-5">Building Together: Ukrainian-led Recovery with Global Support</h1>
+  
+              <p class="lead">The Ukraine Rebuilding Action Group (URAG) is a volunteer organization established by the American Planning Association International Division to assist Ukraine in its recovery in collaboration with Ukrainian planners, architects, builders, government officials, and community members.  </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
 
+    <!-- what we do  -->
+    <section class="icons bg-light pb-5 pt-5">
+      <div class="container-xl">
+        <div class="row hstack g-4">
+          <div class="col-md-4 d-flex gap-4">
+            <i class="fas fa-user fa-3x text-primary"></i>
+            <div>
+              <h5 class="fw-bold">Networking</h5>
+              <p class="text-muted">
+                Discover the key to unleashing your true blogging potential. Our
+                ebook provides expert guidance on creating compelling content
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4 d-flex gap-4">
+            <i class="fas fa-rocket fa-3x text-secondary"></i>
+            <div>
+              <h5 class="fw-bold">Knowledge Sharing</h5>
+              <p class="text-muted">
+                Take your blog to new heights with our proven strategies for
+                driving traffic and increasing your blog's visibility.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4 d-flex gap-4">
+            <i class="fas fa-dollar fa-3x text-primary"></i>
+            <div>
+              <h5 class="fw-bold">Collaboration</h5>
+              <p class="text-muted">
+                Turn your passion for blogging into a profitable venture. Our
+                ebook reveals tried-and-tested monetization strategies
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- Principles -->
+
+<section id="details" class="details my-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div
+          class="text-container d-flex flex-column justify-content-center h-100"
+        >
+          <h2 class="display-6 mb-4">Our Principles</h2>
+          
+          <p>The URAG supports Ukraine recovery under three principles:</p>
+          <ul class="list-group list-group-flush lh-lg">
+            <li class="list-group-item">
+              <i class="fas fa-square text-primary me-1"></i>
+              <strong>Sustainability & Resilience</strong> Promoting development that is environmentally responsible, resource-efficient, and socially equitable. Designing cities that will withstand the impacts of nature and man-made disasters. 
+            </li>
+            <li class="list-group-item">
+              <i class="fas fa-square text-primary me-1"></i>
+              <strong>Community Engagement</strong> Engaging and involving community members in the planning and design process, fostering collaboration, dialogue, and shared decision-making to ensure that plans reflect the needs and aspirations of local residents.
+            </li>
+            <li class="list-group-item">
+              <i class="fas fa-square text-primary me-1"></i>
+              <strong>Human Scale & Context-sensitive</strong> Designing communities with a focus on human needs and responding to the unique context of each place, respecting local culture, history, and natural features, integrating new development harmoniously into the existing built environment.
+
+            </li>
+          </ul>
+          <a
+            class="btn btn-primary text-white mt-4 align-self-start"
+            data-bs-toggle="modal"
+            data-bs-target="#modal1"
+            >Get Your Copy Now</a
+          >
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="image-container p-5">
+          <img src="images/description.png" alt="" class="img-fluid" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
+<!-- How started -->
+<section class="statement mb-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="text-container bg-light p-5 rounded-5">
+          <h2>2022 Accomplishments</h2>
+          <p><small>Prepared January 1, 2023</small></p>
+          <p>
+            <strong>San Diego 2022 National Planning Conference Session and Report</strong> We organized and facilitated a very well-attended session on planning for Ukraine rebuilding, then followed up by preparing a report on the session based on both the speaker's presentations and the audiences oral and written comments.
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
-
-
-
+<section class="details my-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="image-container p-5">
+          <img src="images/author.png" alt="" class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div
+          class="text-container d-flex flex-column justify-content-center h-100"
+        >
+          <h2 class="display-6">Work Plan</h2>
+          <p>
+            Discover techniques for effective storytelling, engaging
+            visuals, and compelling calls-to-action. Unlock the secrets of
+            creating a consistent and authentic brand voice that sets you
+            apart from the competition.
+          </p>
+          <ul class="list-group list-group-flush lh-lg">
+            <li class="list-group-item">
+              <i class="fas fa-square text-primary me-2"></i>
+              <strong>Collaborate with and influence APA and other relevant key organizations.</strong>
+            </li>
+            <li class="list-group-item">
+              <i class="fas fa-square text-primary"></i>
+              <strong>
+                Help institutionalize and support planning and planning education in Ukraine.
+              </strong>
+            </li>
+            <li class="list-group-item">
+              <i class="fas fa-square text-primary"></i>
+              <strong>
+                Provide capacity building and technical assistance.
+              </strong> 
+            </li>
+          </ul>
+          <a
+            class="btn btn-primary text-white mt-4 align-self-start"
+            data-bs-toggle="modal"
+            data-bs-target="#modal2"
+            >Learn More</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/darkmodetoggle.js"></script>
   </body>
 </html>

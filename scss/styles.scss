@@ -3,6 +3,11 @@
 }
 
 .header{
-  background: url(../images/header-background.jpg) center center no-repeat;
+  background: url(../images/yaroslav-romanenko-7YkwadIk2v8-unsplash.jpg) center center no-repeat;
   background-size: cover;
+}
+
+.navbar-hidden {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
 }
