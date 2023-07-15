@@ -1,86 +1,13 @@
-<!DOCTYPE html>
-<html lang="en" data-bs-theme-value="dark">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/font-awesome.css" />
-    <link rel="stylesheet" href="css/bootstrap.css" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="icon" href="images/favicon.png" />
-    <title>URAG</title>
-  </head>
-
-  <body>
-    <!-- nav -->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light shadow">
-      <div class="container">
+<?php
+include 'inc/header.php';
+?>
 
 
-        <!-- brand -->
-        <a href="index.html" class="navbar-brand h1 fw-bolder fs-3 mb-0">URAG</a>
-
-        <!-- button -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- dropoff -->
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            
-            <li class="nav-item me-3">
-              <a href="index.html" class="nav-link fw-semibold active" aria-current="page">Home</a>
-            </li>
-
-            <li class="nav-item dropdown me-3">
-              <a class="nav-link dropdown-toggle fw-semibold" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                About
-              </a>
-              <ul class="dropdown-menu boundary-primary" aria-labelledby="aboutDropdown">
-                <li><a class="dropdown-item" href="#">Background</a></li>
-                <li><a class="dropdown-item" href="#">Mission</a></li>
-                <li><a class="dropdown-item" href="#">Team</a></li>
-                <li><a class="dropdown-item" href="#">Partners</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Contact</a></li>
-              </ul>
-            </li>
-
-            <li class="nav-item me-3">
-              <a href="#details" class="nav-link fw-semibold">Project</a>
-            </li>
-
-            <li class="nav-item me-3">
-              <a href="#details" class="nav-link fw-semibold">Resources</a>
-            </li>
-
-            <li class="nav-item mt-md-0 mt-4">
-        
-              <a href="#details" class="nav-link fw-semibold btn btn-primary text-white mx-4 px-4">Join Us</a>
-            </li>
-
-            <li class="nav-item">
-              <div class="btn-group">
-                <button class="btn btn-secondary btn-sm" data-bs-theme-value="dark">Dark</button>
-                <button class="btn btn-light btn-sm" data-bs-theme-value="light">light</button>
-              </div>
-            </li>
-        
-          </ul>
-
-        </div>
-      </div>
-    </nav>
 
     <!-- Header -->
     <header class="header">
       <div class="hero text-white pt-7 pb-5">
-        <div class="container-xl">
+        <div class="container">
           <div class="p-md-7 ps-md-0 col-lg-7 col-md-10 col-12 pb-2 ">
             <div class="p-4 rounded-5" style="background-color: rgba(54, 54, 54, 0.7);">
 
@@ -197,6 +124,7 @@
 </section>
 
 
+
 <section class="details my-5">
   <div class="container">
     <div class="row">
@@ -209,7 +137,7 @@
         <div
           class="text-container d-flex flex-column justify-content-center h-100"
         >
-          <h2 class="display-6">Work Plan</h2>
+          <h2 class="display-6">Project</h2>
           <p>
             Discover techniques for effective storytelling, engaging
             visuals, and compelling calls-to-action. Unlock the secrets of
@@ -245,6 +173,120 @@
     </div>
   </div>
 </section>
+
+
+<!-- Join email list -->
+
+<section class="download bg-dark">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="row">
+          <div class="col-lg-9 my-3">
+            <div class="text-container text-white d-flex flex-column justify-content-center h-100 mb-5">
+            <h2 class="fw-bold pb-2">Join URAG Email List</h2>
+              <p class="pb-2">
+                By joining our email list, you will receive regular URAG newsletters, keeping you informed about opportunities to lend your skills. Together, we can create a brighter future for Ukraine and foster positive change on a global scale.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div
+          class="text-container text-white d-flex flex-column justify-content-center .align-items-start h-100 mb-5"
+        >
+          <!-- Form -->
+
+          <form method="POST" action="" id="formLandingPage">
+            <div class="mb-3">
+              <input type = "email" name = "email" class="form-control form-control-lg" placeholder="Email Address" required
+              />
+              <button class="btn btn-primary text-white mt-4" type="submit" name="submit">
+                submit 
+              </button>
+
+            </div>
+          </form>
+          
+          <div id="alert" class="p-2 m-2 d-inline-flex align-items-center justify-content-between d-none"  role="alert">Thank you! The email has been added to our email list.
+            <button id="closeAlert" aria-label="Close" style="border: none; background-color:transparent">
+              <i class="bi bi-x-lg" aria-label="Close"></i>
+            </button>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="border-top border-primary bg-dark text-white py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="d-inline-block mb-4 h4">
+          <div class="mb-1">
+            <small class="fs-6">APA International Division</small>
+          </div>
+          Ukraine Rebuilding Action Group
+        </div>
+        <ul class="list-unstyled list-inline">
+          <li class="list-inline-item">
+            <a href="index.html" class="nav-link link-light">Home</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#details" class="nav-link link-light">Project</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#details" class="nav-link link-light">Team</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="contact.html" class="nav-link link-light">Contact</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://international.planning.org/" class="nav-link link-light">APA Intl.Division</a>
+          </li>
+        </ul>
+        <div>
+          <p> www.URAG.org <br>Email: info@urag.org </p>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+          <small>
+            CHICAGO <br>
+            American Planning Association <br>
+            International Division <br>
+            <br>
+            205 N. Michigan Ave., Suite 1200<br>
+            Chicago, IL 60601-5927<br>
+            Phone: 312-431-9100, Fax: 312-786-6700
+          </small>
+      </div>
+      <div class="col-md-4">
+        <p class="text-start">
+          <div class="d-inline-flex mb-2">
+            <i class="fa-brands fa-creative-commons-by fs-2 me-2"></i>
+            <i class="fa-brands fa-creative-commons fs-2"></i>
+          </div>
+          <div>
+            <small>
+              Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" class="text-light">Creative Commons Attribution 4.0 International license</a>.
+            </small>
+          </div>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
 
 
     <script src="js/bootstrap.bundle.min.js"></script>
