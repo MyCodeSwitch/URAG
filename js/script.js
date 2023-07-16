@@ -16,6 +16,9 @@ window.addEventListener("scroll", function(){
 
 
 // form submision at landing page
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
     var form = document.getElementById('formLandingPage');
 
@@ -91,3 +94,15 @@ function close(){
 
 const closeBtn = document.querySelector('#closeAlert');
 closeBtn.addEventListener('click', close)
+
+
+// expendable card at team page
+document.addEventListener('DOMContentLoaded', function() {
+    var expandButton = document.querySelector('.expand-btn');
+    var expandableContent = document.querySelector('.expandable');
+  
+    expandButton.addEventListener('click', function() {
+      expandableContent.classList.toggle('expanded');
+      expandButton.textContent = expandableContent.classList.contains('expanded') ? 'Read Less' : 'Read More';
+    });
+  });
