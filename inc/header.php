@@ -27,7 +27,7 @@
 
 
         <!-- brand -->
-        <a href="index.html" class="navbar-brand h1 fw-bolder fs-3 mb-0">URAG</a>
+        <a href="index.php" class="navbar-brand h1 fw-bolder fs-3 mb-0">URAG</a>
 
         <!-- button -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
@@ -49,7 +49,7 @@
               <ul class="dropdown-menu boundary-primary" aria-labelledby="aboutDropdown">
                 <li><a class="dropdown-item" href="#">Background</a></li>
                 <li><a class="dropdown-item" href="#">Mission</a></li>
-                <li><a class="dropdown-item" href="#">Team</a></li>
+                <li><a class="dropdown-item" href="./team.php">Team</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="#">Contact</a></li>
               </ul>
