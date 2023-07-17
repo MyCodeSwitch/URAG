@@ -8,7 +8,7 @@ include 'inc/header.php';
   }
 
   .card{
-    background-color: var(--bs-gray-300) ;
+    background-color: whitesmoke ;
   }
 
 
@@ -37,36 +37,30 @@ include 'inc/header.php';
 
 <div class="container mt-7 mb-7">
   <div id="personCtn" class="row">
-    <div class="col-lg-6">
-      <div class="card mb-3 border-0 rounded-3">
+    <div class="col-lg-4 col-md-6">
+      <div class="card m-3 pt-3 shadow">
         <!-- cardbody -->
         <div class="card-body">
-          <div class="row">
-            <div class="col-4">
+          <div class="d-flex flex-column justify-content-center">
               <div class="user-img d-flex justify-content-center">
                 <img src="https://randomuser.me/api/portraits/men/17.jpg" alt="" class="img-fluid rounded-circle" />
               </div>
-            </div>
-            <div class="col-8">
-              <div class="user-info">
-                <h3 class="display-6 mb-4">Jing Zhang <span class="small fs-4 ms-2">AICP</span></h3>
-                <h6 class="mb-4 fw-bolder text-secondary">United States, China</h6>
-                <a id="linkedInIcon" href="https://www.cnn.com" target="_blank"><i class="fa-brands fa-linkedin fs-3 me-2"></i></a>
-                <a id="emailIcon" href="https://www.cnn.com" target="_blank"><i class="fa-solid fa-envelope fs-3 mb-4"></i></a>
-
-                <div>
-                  Transportation Planning, Full Stack Development, Piano
+                <div class="fs-3 fw-bold my-4 d-inline-flex justify-content-center"> <div>Jing Zhang</div><div class="ms-2">AICP</div></div>
+                <h6 class="mb-4 d-flex justify-content-center">United States, China</h6>
+                <div class="d-flex justify-content-center">
+                  <a id="linkedInIcon" href="https://www.cnn.com" target="_blank"><i class="fa-brands fa-linkedin fs-3 me-2"></i></a>
+                  <a id="emailIcon" href="https://www.cnn.com" target="_blank"><i class="fa-solid fa-envelope fs-3 mb-4"></i></a>
                 </div>
-              </div>
-            </div>
+                <div class="d-flex justify-content-center">
+                  Transportation Planning, Full Stack Development
+                </div>
           </div>
         </div>
         <!-- expand button -->
-        <div id="btn-expand" class="bg-info rounded-bottom d-flex align-items-center justify-content-center" style="height: 40px;" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-          <div id="learnMoreAboutText" class="myClose" p-2>
+        <div id="btn-expand" class="bg-info rounded-bottom d-flex justify-content-center" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+          <div id="learnMoreAboutText" class="myClose p-2">
             Learn More About Jing
           </div>
-
         </div>
 
         <div class="container card-text collapse mt-2" id="collapseExample">
