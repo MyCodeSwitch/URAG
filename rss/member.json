@@ -1,22 +1,35 @@
 [
   {
-    "name": "Jing Zhang",
+    "first_name": "Jing",
+    "last_name": "Zhang",
+    "photo":"https://randomuser.me/api/portraits/men/21.jpg",
     "country": "United States, China",
-    "speciaty": "Transportation Planning",
+    "linkedIn": "www.cnn.com",
+    "email": "jingzhangaicp@gmail.com",
+    "fields": "Transportation planning, Full stack development",
     "detail": "sefsefseihih fesefs sefsef, efseihih fesefs sefse, efseihih fesefs sefse, efseihih fesefs sefse, efseihih fesefs sefse, efseihih fesefs sefse"
   },
   {
-    "name": "Annie",
+    "first_name": "Annie",
+    "last_name": "Zhang",
+    "photo":"https://randomuser.me/api/portraits/women/22.jpg",
     "country": "United States",
-    "speciaty": "lego builder",
+    "linkedIn": "www.cnn.com",
+    "email": "jingzhangaicp@gmail.com",
+    "fields": "Drawing",
     "detail": "sefsefseihih fesefs sefsef, efseihih fesefs sefse, efseihih fesefs sefse, efseihih fesefs sefse, efseihih fesefs sefse, efseihih fesefs sefse"
   },
   {
-    "name": "Tingting Chang",
-    "country": "China",
-    "speciaty": "singer",
+    "first_name": "Tingting",
+    "last_name": "Chang",
+    "photo":"https://randomuser.me/api/portraits/women/49.jpg",
+    "country": "United States, China",
+    "linkedIn": "www.cnn.com",
+    "email": "jingzhangaicp@gmail.com",
+    "fields": "Singing",
     "detail": "sefsefseihih fesefs sefsef, efseihih fesefs sefse, efseihih fesefs sefse, efseihih fesefs sefse, efseihih fesefs sefse, efseihih fesefs sefse"
   }
+  
 
 
 

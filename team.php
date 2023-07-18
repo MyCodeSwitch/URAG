@@ -10,32 +10,33 @@ include 'inc/header.php';
   .card{
     background-color: whitesmoke ;
   }
+ 
+
+  .expandCtn,
+  .expandBtn{
+  background-color: var(--bs-gray-300);
+  transition: background-color 0.3s ease;
+  }
+
+  .expandBtn:hover {
+  background-color: var(--bs-gray-400);
+}
 
 
 </style>
 
 <!-- Header -->
-<!-- <header class="header">
-      <div class="hero text-white pt-7 pb-5">
-        <div class="container">
-          <div class="p-md-7 ps-md-0 col-lg-7 col-md-10 col-12 pb-2 ">
-            <div class="p-4 rounded-5" style="background-color: rgba(54, 54, 54, 0.7);">
+<div class="container">
+  <div class="pt-7 flex-column justify-content-center">
+    <div class="display-4 text-dark">
+      The Team
+    </div>
+      <p>We are consisted of volunteers</p>
+    </div>
+</div>
 
-              <h1 class="display-5 fw-bold mb-5">Building Together: Ukrainian-led Recovery with Global Support</h1>
-  
-              <p class="lead">The Ukraine Rebuilding Action Group (URAG) is a volunteer organization established by the American Planning Association International Division to assist Ukraine in its recovery in collaboration with Ukrainian planners, architects, builders, government officials, and community members.  </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header> -->
-
-
-
-
-
-
-<div class="container mt-7 mb-7">
+<!-- cards -->
+<div class="container mt-3 mb-7">
   <div id="personCtn" class="row">
     <div class="col-lg-4 col-md-6">
       <div class="card m-3 pt-3 shadow">
@@ -45,26 +46,29 @@ include 'inc/header.php';
               <div class="user-img d-flex justify-content-center">
                 <img src="https://randomuser.me/api/portraits/men/17.jpg" alt="" class="img-fluid rounded-circle" />
               </div>
-                <div class="fs-3 fw-bold my-4 d-inline-flex justify-content-center"> <div>Jing Zhang</div><div class="ms-2">AICP</div></div>
+                <div class="fs-3 fw-bold my-4 d-inline-flex justify-content-center"> <div>Jing Zhang</div>,<div class="ms-2">AICP</div></div>
                 <h6 class="mb-4 d-flex justify-content-center">United States, China</h6>
                 <div class="d-flex justify-content-center">
-                  <a id="linkedInIcon" href="https://www.cnn.com" target="_blank"><i class="fa-brands fa-linkedin fs-3 me-2"></i></a>
+                  <a id="linkedInIcon" href="https://www.cnn.com" target="_blank"><i class="fa-brands fa-linkedin fs-3 me-3"></i></a>
                   <a id="emailIcon" href="https://www.cnn.com" target="_blank"><i class="fa-solid fa-envelope fs-3 mb-4"></i></a>
                 </div>
-                <div class="d-flex justify-content-center">
-                  Transportation Planning, Full Stack Development
+                <div class="d-flex justify-content-center text-center">
+                  <p>Transportation Planning, Full Stack Development</p> 
                 </div>
-          </div>
-        </div>
-        <!-- expand button -->
-        <div id="btn-expand" class="bg-info rounded-bottom d-flex justify-content-center" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-          <div id="learnMoreAboutText" class="myClose p-2">
-            Learn More About Jing
           </div>
         </div>
 
-        <div class="container card-text collapse mt-2" id="collapseExample">
-          <p>
+        <!-- expand button -->
+        <div class="expandBtn rounded-bottom d-flex justify-content-center align-items-center toggleBtn" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+          <div class="myClose px-3 toggleBtnContent">
+            More about Jing
+          </div>
+          <i class="fa-solid fa-circle-plus p-3 ms-auto toggleBtnIconPlus"></i>
+          <i class="fa-solid fa-circle-minus p-3 ms-auto toggleBtnIconMinus d-none"></i>
+        </div>
+
+        <div class="container card-text collapse expandCtn" id="collapseExample">
+          <p class="p-3">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum voluptate commodi culpa porro tempora quasi minima,
             impedit unde atque quia assumenda blanditiis dolore eius nobis eveniet doloribus reprehenderit laboriosam totam
             natus earum eligendi. Perferendis voluptas nisi excepturi tempora modi quae dolores? Minus fugiat nesciunt ratione

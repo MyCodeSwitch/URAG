@@ -93,84 +93,41 @@ closeBtn.addEventListener('click', close);
 
 //Card Expand Button on Team page - HARD CODE
 
-let btnExpand = document.querySelector('#btn-expand');
+let toggleBtn = document.querySelector('.toggleBtn');
 
-function expandChange (){
-    let learnMoreAbout = document.querySelector('#learnMoreAboutText');
+function memberInfoToggle (){
+    let toggleBtnContent = document.querySelector('.toggleBtnContent');
+    let toggleBtnIconPlus = document.querySelector('.toggleBtnIconPlus')
+    let toggleBtnIconMinus = document.querySelector('.toggleBtnIconMinus')
 
-    if (learnMoreAbout.classList.contains('myClose')){
-        learnMoreAbout.textContent = "Minimize tab";
-        learnMoreAbout.classList.remove('myClose');
+    if (toggleBtnContent.classList.contains('myClose')){
+        toggleBtnContent.textContent = " ";
+        toggleBtnIconPlus.classList.add('d-none');
+        toggleBtnIconMinus.classList.remove('d-none');
+        toggleBtnContent.classList.remove('myClose');
+        toggleBtn.classList.remove('rounded-bottom')
     }else{
-        learnMoreAbout.textContent = "Learn more about Jing";
-        learnMoreAbout.classList.add('myClose');
+        toggleBtnContent.textContent = "More about Jing";
+        toggleBtnIconPlus.classList.remove('d-none');
+        toggleBtnIconMinus.classList.add('d-none');
+        toggleBtnContent.classList.add('myClose');
+        toggleBtn.classList.add('rounded-bottom')
     }
-
 }
 
-btnExpand.addEventListener('click', expandChange)
+toggleBtn.addEventListener('click', memberInfoToggle)
 
-//Card Expand Button on Team page - DYNAMIC
+//Card generation on team page - DYNAMIC
 
 async function getData() {
     const contentRes = await fetch('./rss/member.json');
     const content = await contentRes.json();
-    return content;
+    return content; 
   }
 
 getData().then((people)=>{
     people.forEach(function (person){
-        const col = document.createElement('div');
-        col.className = "col-lg-6";
-
-        const card = document.createElement('div');
-        card.classList.add('card', 'mb-3', 'border-0', 'rounded-3', 'shadow');
-
-        const cardBody = document.createElement('div');
-        cardBody.className = "card-body";
-
-        const cardBodyRow = document.createElement('div');
-        cardBodyRow.className = "row";
-
-        // photo side
-
-        const cardBodyRowCol4 = document.createElement('div');
-        cardBodyRowCol4.className = 'col-4';
-
-        const memberPhotoDiv = document.createElement('div');
-        memberPhotoDiv.className = 'user-img';
         
-        const memberPhotoContent = document.createElement('img');
-        memberPhotoContent.classList.add('img-fluid', 'rounded-circle');
-        memberPhotoContent.setAttribute("src", "https://randomuser.me/api/portraits/men/75.jpg")
-
-        col.appendChild(card); 
-        card.appendChild(cardBody);
-        cardBody.appendChild(cardBodyRow);
-        cardBodyRow.appendChild(cardBodyRowCol4);
-        cardBodyRowCol4.appendChild(memberPhotoDiv);
-        memberPhotoDiv.appendChild(memberPhotoContent);
-
-        const personCtn = document.querySelector('#personCtn');
-        personCtn.appendChild(col);
-
-        // info side
-
-        const cardBodyRowCol8 = document.createElement('div');
-        cardBodyRowCol8.className = 'col-8';
-        
-        const memberInfoCtn = document.createElement('div');
-        memberInfoCtn.className = 'user-info';
-
-        const nameCtn = document.createElement('div');
-        nameCtn.classList.add('display-6','mb-4');
-        nameCtn.textContent = person.name
-
-        cardBodyRowCol8.appendChild(memberInfoCtn);
-        memberInfoCtn.appendChild(nameCtn);
-
-        cardBodyRow.appendChild(cardBodyRowCol8);
-
         console.log(person)
     })
 }
