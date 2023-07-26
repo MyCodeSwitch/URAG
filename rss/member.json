@@ -2,6 +2,7 @@
   {
     "first_name": "Jing",
     "last_name": "Zhang",
+    "professional": "AICP",
     "photo":"https://randomuser.me/api/portraits/men/21.jpg",
     "country": "United States, China",
     "linkedIn": "www.cnn.com",
@@ -12,16 +13,51 @@
   {
     "first_name": "Annie",
     "last_name": "Zhang",
+    "professional": "JD",
     "photo":"https://randomuser.me/api/portraits/women/22.jpg",
-    "country": "United States",
+    "country":"United States",
     "linkedIn": "www.cnn.com",
-    "email": "jingzhangaicp@gmail.com",
+    "email": "",
     "fields": "Drawing",
     "detail": "sefsefseihih fesefs sefsef, efseihih fesefs sefse, efseihih fesefs sefse, efseihih fesefs sefse, efseihih fesefs sefse, efseihih fesefs sefse"
   },
   {
     "first_name": "Tingting",
     "last_name": "Chang",
+    "professional": "DMA",
+    "photo":"https://randomuser.me/api/portraits/women/49.jpg",
+    "country": "United States, China",
+    "linkedIn": "www.cnn.com",
+    "email": "jingzhangaicp@gmail.com",
+    "fields": "Singing",
+    "detail": "sefsefseihih fesefs sefsef, efseihih fesefs sefse, efseihih fesefs sefse, efseihih fesefs sefse, efseihih fesefs sefse, efseihih fesefs sefse"
+  },
+  {
+    "first_name": "Jing",
+    "last_name": "Zhang",
+    "professional": "AICP",
+    "photo":"https://randomuser.me/api/portraits/men/21.jpg",
+    "country": "United States, China",
+    "linkedIn": "www.cnn.com",
+    "email": "jingzhangaicp@gmail.com",
+    "fields": "Transportation planning, Full stack development",
+    "detail": "sefsefseihih fesefs sefsef, efseihih fesefs sefse, efseihih fesefs sefse, efseihih fesefs sefse, efseihih fesefs sefse, efseihih fesefs sefse"
+  },
+  {
+    "first_name": "Annie",
+    "last_name": "Zhang",
+    "professional": "JD",
+    "photo":"https://randomuser.me/api/portraits/women/22.jpg",
+    "country":"United States",
+    "linkedIn": "www.cnn.com",
+    "email": "",
+    "fields": "Drawing",
+    "detail": "sefsefseihih fesefs sefsef, efseihih fesefs sefse, efseihih fesefs sefse, efseihih fesefs sefse, efseihih fesefs sefse, efseihih fesefs sefse"
+  },
+  {
+    "first_name": "Tingting",
+    "last_name": "Chang",
+    "professional": "DMA",
     "photo":"https://randomuser.me/api/portraits/women/49.jpg",
     "country": "United States, China",
     "linkedIn": "www.cnn.com",
@@ -29,7 +65,6 @@
     "fields": "Singing",
     "detail": "sefsefseihih fesefs sefsef, efseihih fesefs sefse, efseihih fesefs sefse, efseihih fesefs sefse, efseihih fesefs sefse, efseihih fesefs sefse"
   }
-  
 
 
 

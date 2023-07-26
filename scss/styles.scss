@@ -12,5 +12,7 @@
   transition: transform 0.3s ease-in-out;
 }
 
-
+.unclickable-element.inside-clickable {
+  pointer-events: none; 
+}
 
