@@ -1,3 +1,8 @@
+//Set global obj
+const global = {
+  currentPage: window.location.pathname
+}
+
 // navbar hide and show
 let prevScrollPosition = window.scrollY || window.pageYOffset;
 
@@ -14,73 +19,6 @@ window.addEventListener("scroll", function(){
 }
 )
 
-
-// form submision at landing page
-
-let emailValueInMsg;
-
-document.addEventListener('DOMContentLoaded', function() {
-    var form = document.getElementById('formLandingPage');
-
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        var emailInput = form.querySelector('input[name="email"]');
-        var email = emailInput.value;
-
-        emailValueInMsg = email;
-
-        // Validate and sanitize email
-        email = email.trim();
-        if (!validateEmail(email)) {
-            displayMessage('Invalid email format', 'error');
-            return;
-        }
-
-        // Submit the form via AJAX
-        fetch('', {
-            method: 'POST',
-            body: new URLSearchParams(new FormData(form))
-        })
-        .then(function(response) {
-            if (!response.ok) {
-                throw new Error('Request failed');
-            }
-            return response.json();
-        })
-        .then(function(data) {
-            if (data.status === 'success') {
-                displayMessage();
-                form.reset();
-            } else {
-                displayMessage(data.message, 'error');
-            }
-        })
-        .catch(function(error) {
-            console.error(error);
-            displayMessage('An error occurred while submitting the form.', 'error');
-        });
-    });
-
-    function validateEmail(email) {
-        var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return regex.test(email);
-    }
-
-    function displayMessage() {
-        let closeIcon = document.querySelector('#closeAlert')
-
-        let msg = document.createTextNode(`Thank you! We added ${emailValueInMsg} to our database`);
-
-        const msgBar = document.querySelector('#alert')
-
-        msgBar.insertBefore(msg, closeIcon);
-
-        msgBar.classList.remove('d-none');
-    }
-});
-
-
 //Close the msg bar for email list input on landing page
 function close(){
     const alert = document.querySelector('#alert');
@@ -90,17 +28,14 @@ function close(){
 const closeBtn = document.querySelector('#closeAlert');
 closeBtn.addEventListener('click', close);
 
-
-
-
 //Card generation on team page - DYNAMIC
 
+function teamPage(){
 async function getData() {
     const contentRes = await fetch('./rss/member.json');
     const content = await contentRes.json();
     return content; 
   }
-
 getData()
 .then((people)=>{
     people.forEach(function (person){
@@ -155,7 +90,6 @@ getData()
     })
 }
 ) 
-
 .then(function(){
   let toggleBtns = document.querySelectorAll('.toggleBtn');
   
@@ -194,5 +128,80 @@ getData()
     }}
   }
 }
-)
+)}
 
+//**********
+//SignUpForm
+//**********
+
+const express = require('express');
+const mysql = require('mysql2');
+
+const app = express();
+const port = 1080; // You can change this to the desired port
+
+// MySQL database configuration
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'Jing',       // Replace with your MySQL username
+  password: '258258', // Replace with your MySQL password
+  database: 'urag_team'    // Replace with your MySQL database name
+});
+
+// Express middleware to parse incoming request data
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+// Handle the form submission
+app.post('/submit', (req, res) => {
+  const name = req.body.name;
+  const email = req.body.email;
+
+  // Insert the form data into the database
+  const sql = 'INSERT INTO  (name, email) VALUES (?, ?)';
+  connection.query(sql, [name, email], (err, result) => {
+    if (err) {
+      console.error('Error submitting data:', err);
+      res.status(500).send('Error submitting data.');
+    } else {
+      console.log('Form data submitted successfully!');
+      res.status(200).send('Form data submitted successfully!');
+    }
+  });
+});
+
+// Start the server
+app.listen(port, () => {
+  console.log(`Server running on http://localhost:${port}`);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Init App
+function init(){
+  switch(global.currentPage){
+    case'/':
+    case'/URAG/index.html':
+      console.log('Home');
+      break;
+    case'/URAG/team.html':
+      teamPage();
+      break;
+  }
+}
+
+document.addEventListener('DOMContentLoaded', init);
